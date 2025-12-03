@@ -111,4 +111,43 @@ header h1{
     cursor: pointer;
     background-color: rgb(0, 119, 255);
     color: white;
+
+}
+
+
+
+/*Mode paysage----------*/
+@media screen and (max-height: 500px) and (orientation: landscape) {
+
+    #wrapper {
+        height: auto;
+        padding: 10px 0;
+    }
+
+    #container {
+        width: 100vw;
+        height: calc(100vw * 463 / 720);
+        max-height: 100vh;
+    }
+
+    #container img,
+    #container canvas {
+        width: 100%;
+        height: 100%;
+    }
+
+    #info {
+        width: 95%;
+        font-size: 14px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 5px;
+    }
+
+    .btn {
+        width: 20px;
+        height: 20px;
+        font-size: 12px;
+    }
 }
