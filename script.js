@@ -134,6 +134,8 @@ document.getElementById("clear").onclick = function(){
     drawPath(path);
     distance.innerHTML = "distance : ";
     time.innerHTML = "time : ";
+    begin.innerHTML = "start : ";
+    dest.innerHTML = "destination : ";
     
 }
 
@@ -153,14 +155,18 @@ function calcDistance(path) {
 
 const distance = document.getElementById("distance");
 const time = document.getElementById("time");
+const begin = document.getElementById("start");
+const dest = document.getElementById("dest");
 
 function handleClick(node) {
     if (!start) {
         start = node;
         console.log("Start:", node);
+        begin.innerHTML = "start : " + start;
     } else {
         const end = node;
         console.log("End:", node);
+        dest.innerHTML = "destination : " + end;
         const path = dijkstra(adjacency, start, end);
         console.log("Chemin :", path);
         drawPath(path);
