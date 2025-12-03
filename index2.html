@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carte interactive</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="principal">
+        <div id="info">
+            <span id="distance">distance : </span>
+            <span id="time">time : </span>
+            <span></span>
+        </div>
+        <div id="wrapper">
+            <div id="container" style="position: relative; width: 720px; height: 463px;">
+                <img src="images/Campus.png" style="width: 100%; height: 100%; position: absolute; top:0; left:0; z-index:0;">
+                <canvas id="canvas" width="720" height="463"></canvas>
+            </div>
+        </div>
+        <button id="clear">clear</button>
+        <div>
+            <p id="distance"></p>
+            <p id="time"></p>
+        </div>
+    </div>
+</body>
+<script src="script2.js"></script>
+</html>
